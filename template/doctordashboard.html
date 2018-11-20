@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>patient management system</title>
+<!-- this is for bootstrap -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="doctordashboard.html" class="w3-bar-item w3-button"> Dashboard</a>
+  <a href="patientlist.html" class="w3-bar-item w3-button"> Patient List</a>
+  <a href="appointmentlist.html" class="w3-bar-item w3-button">Appoinment </a>
+
+</div>
+
+<div id="main">
+
+<div class="w3-teal">
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>Doctor's dashboard</h1>
+  </div>
+</div>
+
+<div class="information">
+  <div class="container">
+    <div class="row">
+            <div class="col-md-2">
+              <img src="images/doc1.jpg">
+            </div>
+
+             <div class="col-md-10 info">
+              <div ><strong>Full name</strong>:<span> Dr.John kendey</span></div>
+              <div><strong>Address</strong>:<span> Bhaisepati</span></div>
+              <div><strong>Age</strong>:<span>40</span></div>
+              <div><strong>Gender</strong>:<span>Male</span></div>
+              <div><strong>Specialist</strong>:<span>Gynoecology</span></div>
+              <div><strong>Experience</strong>:<span>3years</span></div>
+
+              <div><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Edit Profile
+               </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Fill in the information</h4>
+                        </div>
+                        <div class="modal-body">
+                       <form action="action_page.php">
+
+                        <div class="form-group">
+                          <label for="fname">Full Name</label>
+                          <input type="text" id="fname" name="firstname">
+                        </div>
+
+                         <div class="form-group">
+                          <label for="address">Address</label>
+                          <input type="text" id="address" name="address">
+                        </div>
+
+                         <div class="form-group">
+                          <label for="phn">Contact no.</label>
+                          <input type="text" id="phn" name="phn">
+                        </div>
+
+                         <div class="form-group">
+                          <label for="department">Department</label>
+                          <input type="text" id="department" name="department">
+                        </div>
+
+                         <div class="form-group">
+                          <label for="email">Email Id</label>
+                          <input type="text" id="email" name="email">
+                        </div>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-basic" data-dismiss="modal">Save</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          
+            </div>
+
+
+     </div>
+        
+   </div>
+
+  </div>
+</div>
+
+<div class="services">
+    <div class="container">
+    <h2>HISTORY</h2>
+    <div class="row">
+        <div class="col-md-4">
+          <div class="ser1 no-bg"> 
+             <a href="patientlist.html">Patient</a>
+             <i class="fa fa-id-card" style="font-size:160px;"></i>
+          </div>
+
+         </div>
+         <div class="col-md-4">
+          <div class="ser1 no-bg"> 
+
+            <p> Appointments</p>
+          <span class="glyphicon glyphicon-list-alt" style="font-size:160px;"></span>
+          </div>
+
+          </div>
+          <div class="col-md-4">
+              <div class="ser1 no-bg"> 
+                <p>Reports</p>
+                <img src="images/report.jpg">
+              </div>
+           </div>
+     </div>
+
+      
+
+     </div>
+ </div>
+
+
+
+<footer>  
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-4"> 
+                <div class="foot"> 
+                    <img src="images/logo.jpg">
+                    <p class="foot1">Copyright © 2018. <br>
+                    Clifford International Hospital.</p>
+                </div>
+            </div>
+
+           <div class="col-md-4"> 
+                <div class="foot"> 
+                    <ul>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">About Us</a></li>
+                       <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">BLogs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4"> 
+                <div class="foot icons"> 
+                   <h3>Follow Us</h3>
+                   <a href="www.facebook.com" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+
+
+        </div>
+
+     </div>
+
+</footer>
+
+
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+
+
+
+
+
+
+	
+
+</body>
+</html>
