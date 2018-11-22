@@ -1,63 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>patient management system</title>
-<!-- this is for bootstrap -->
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
+{% extends 'master/master.html' %}
 
-<div class="wrapper">
-	
-	<div class="container ">
-	
-		<nav class="clearfix">
-		<ul class="clearfix main-nav">
-			<li><a href="index.html">Home</a></li>
-			<li class="dropdown">
-      <button class="dropbtn">Services</button>
-           <div class="dropdown-content">
-               <a href="#">Surgery</a>
-               <a href="#">Gynaecology</a>
-               <a href="#">Biochemistry</a>
-               <a href="#">Dental</a>
-              <a href="#">ENT</a>
-            </div>
-      </li>
-        <li class="dropdown">
-      <button class="dropbtn">Departments</button>
-           <div class="dropdown-content">
-               <a href="#">Emergency</a>
-               <a href="#">Intensive care unit</a>
-               <a href="#">Coronary care unit</a>
-               <a href="#">Burn Center</a>
-              <a href="#">Endoscopy</a>
-              <a href="#">Physical Therapy</a>
-            </div>
-      </li>
-			<li><a href="#">News</a></li>
-			<li><a href="aboutus.html">About Us</a></li>
+{% load staticfiles %}
 
-		</ul>
+{% block content %}
 
-		<div class="login-nav">
-      <ul class="clearfix">
-        <li><input class="searchbox" type="text" placeholder="Search.."></li>
-         <li><button type="submit"><i class="fa fa-search"></i></button></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
-      </ul>
-    </div>
-		</nav>
-
-	</div>
-</div>	
-
-<div class="container">  
+<!-- slider content -->
 <div class="slider">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -71,7 +18,7 @@
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="images/1.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="{% static 'images/1.jpg' %}" alt="Los Angeles" style="width:100%;">
         <div class="carousel-caption">
           <h3>WE PROVIDE THE BEST DOCTORS</h3>
           <p>Working with us is always so much fun!</p>
@@ -79,21 +26,21 @@
       </div>
 
       <div class="item">
-        <img src="images/2.jpg" alt="Chicago" style="width:100%;">
+        <img src="{% static 'images/2.jpg' %}" alt="Chicago" style="width:100%;">
         <div class="carousel-caption">
           <h3>Need an appointment?</h3>
           <p>you are just one call away</p>
         </div>
       </div>
-    
+
       <div class="item">
-        <img src="images/3.jpg" alt="New York" style="width:100%;">
+        <img src="{% static 'images/3.jpg' %}" alt="New York" style="width:100%;">
         <div class="carousel-caption">
           <h3>View all the records of your checkups</h3>
           <p>We are providing an online facility!</p>
         </div>
       </div>
-  
+
     </div>
 
     <!-- Left and right controls -->
@@ -107,110 +54,68 @@
     </a>
   </div>
 </div>
+<!-- slider end -->
 
 
-</div>
-
-
+<!-- services section -->
 <div class="services">
-    <div class="container">
+  <div class="container">
     <h2>OUR SERVICES</h2>
     <div class="row">
-        <div class="col-md-4">
-          <div class="ser1"> 
-             <p> INTRODUCTION</p>
-             <img src="images/intro.jpg">
-          </div>
+      <div class="col-md-4">
+        <div class="ser1">
+          <p> INTRODUCTION</p>
+          <img src="{% static 'images/intro.jpg' %}">
+        </div>
 
-         </div>
-         <div class="col-md-4">
-          <div class="ser1"> 
+      </div>
+      <div class="col-md-4">
+        <div class="ser1">
 
-            <p>HOSPITAL SERVICES</p>
-            <img src="images/doc.jpg">
-          </div>
+          <p>HOSPITAL SERVICES</p>
+          <img src="{% static 'images/doc.jpg' %}">
+        </div>
 
-          </div>
-          <div class="col-md-4">
-              <div class="ser1"> 
-                <p>COMMUNITY SERVICES</p>
-                <img src="images/ser.jpg">
-              </div>
-           </div>
-     </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ser1">
+          <p>COMMUNITY SERVICES</p>
+          <img src="{% static 'images/ser.jpg' %}">
+        </div>
+      </div>
+    </div>
 
-         <div class="row">
-        <div class="col-md-4">
-          <div class="ser1"> 
-             <p>RESEARCH</p>
-             <img src="images/res.jpg">
-          </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="ser1">
+          <p>RESEARCH</p>
+          <img src="{% static 'images/res.jpg' %}">
+        </div>
 
-         </div>
-         <div class="col-md-4">
-          <div class="ser1"> 
+      </div>
+      <div class="col-md-4">
+        <div class="ser1">
 
-            <p>CONFERENCES</p>
-            <img src="images/conf.jpg">
-          </div>
+          <p>CONFERENCES</p>
+          <img src="{% static 'images/conf.jpg' %}">
+        </div>
 
-          </div>
-          <div class="col-md-4">
-              <div class="ser1"> 
-                <p>OUR TEAM</p>
-                <img src="images/team.png">
-              </div>
-           </div>
-     </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ser1">
+          <p>OUR TEAM</p>
+          <img src="{% static 'images/team.png' %}">
+        </div>
+      </div>
+    </div>
 
-     </div>
- 
+  </div>
+
 
 
 </div>
 
-<footer>  
-    <div class="container">
-        <div class="row"> 
-            <div class="col-md-4"> 
-                <div class="foot"> 
-                    <img src="images/logo.jpg">
-                    <p class="foot1">Copyright © 2018. <br>
-                    HighClifford International Hospital.</p>
-                </div>
-            </div>
-
-           <div class="col-md-4"> 
-                <div class="foot"> 
-                    <ul>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">About Us</a></li>
-                       <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">BLogs</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-4"> 
-                <div class="foot icons"> 
-                   <h3>Follow Us</h3>
-                   <a href="www.facebook.com" class="fa fa-facebook"></a>
-                  <a href="#" class="fa fa-twitter"></a>
-                  <a href="#" class="fa fa-instagram"></a>
-                </div>
-            </div>
+<!-- services part end -->
 
 
-        </div>
-
-     </div>
-
-</footer>
-
-
-
-
-	
-
-</body>
-</html>
+{% endblock %}

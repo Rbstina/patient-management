@@ -11,7 +11,8 @@ class PatientProfile(models.Model):
     age=models.CharField(max_length=10)
     address=models.CharField(max_length=50)
     contact=PhoneField(max_length=100)
-    related_doc=models.ForeignKey(DoctorProfile,default=1)
+    related_doc=models.ForeignKey(DoctorProfile,default=1
+    )
 
 
     def __str__(self):
