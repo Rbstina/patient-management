@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 from patient import settings
 from phone_field import PhoneField
 # from ckeditor.fields import RichTextField
@@ -11,13 +10,17 @@ class Department(models.Model):
     def __str__(self):
         return self.departmentname
 
-
+gender=(('m','Male'),('f','Female'))
 class DoctorProfile(models.Model):
     fullname=models.CharField(max_length=100)
     address=models.CharField(max_length=100)
+    age=models.CharField(max_length=10,default=1)
+    gender=models.CharField(max_length=10,choices=gender,default=1)
     contact=PhoneField(max_length=50)
     specialization=models.ForeignKey(Department)
-    user=models.ForeignKey(settings.AUTH_USER_MODEL,default=1)
+    experience=models.CharField(max_length=100,default=1)
+    image=models.ImageField(upload_to='media/',default=1)
+
 
     def __str__(self):
         return self.fullname

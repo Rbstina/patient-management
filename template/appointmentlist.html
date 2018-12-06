@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>patient management system</title>
+<!-- this is for bootstrap -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="doctordashboard.html" class="w3-bar-item w3-button"> Dashboard</a>
+  <a href="patientlist.html" class="w3-bar-item w3-button"> Patient List</a>
+  <a href="#" class="w3-bar-item w3-button">Appoinment </a>
+
+</div>
+
+<div id="main">
+
+<div class="w3-teal">
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>Doctor's dashboard</h1>
+  </div>
+</div>
+
+
+
+<div class="list">
+  <div class="container">
+    <h3>Appoinments</h3>
+    <div class="row">
+     <div class="col-md-4">
+           <div class="pimg">
+              <img src="images/doc1.jpg">
+           </div>
+
+           <div class="pinfo">
+              <div ><strong>Full name:</strong><span> Sierra William</span></div>
+              <div><strong>Address:</strong><span>Minsk</span></div>
+              <div><strong>Age:</strong><span>25</span></div>
+              <div><strong>Gender:</strong><span>Female</span></div>
+              <div><strong>Case:</strong><span>ENT</span></div>
+              <div><strong>Enrolled:</strong><span> 20118-11-16</span></div> 
+                    
+              
+           </div>
+            <button class="btn-primary">Approve</button> <button class="btn-danger">Decline</button>
+
+
+    </div>
+   
+     <div class="col-md-4">
+           <div class="pimg">
+              <img src="images/doc1.jpg">
+           </div>
+
+           <div class="pinfo">
+              <div ><strong>Full name:</strong><span> Sierra William</span></div>
+              <div><strong>Address:</strong><span>Minsk</span></div>
+              <div><strong>Age:</strong><span>25</span></div>
+              <div><strong>Gender:</strong><span>Female</span></div>
+              <div><strong>Case:</strong><span>ENT</span></div>
+              <div><strong>Enrolled:</strong><span> 20118-11-16</span></div> 
+              
+           </div>
+           <button class="btn-primary">Approve</button> <button class="btn-danger">Decline</button>
+
+    </div>
+
+     <div class="col-md-4">
+           <div class="pimg">
+              <img src="images/doc1.jpg">
+           </div>
+
+           <div class="pinfo">
+              <div ><strong>Full name:</strong><span> Sierra William</span></div>
+              <div><strong>Address:</strong><span>Minsk</span></div>
+              <div><strong>Age:</strong><span>25</span></div>
+              <div><strong>Gender:</strong><span>Female</span></div>
+              <div><strong>Case:</strong><span>ENT</span></div>
+              <div><strong>Enrolled:</strong><span> 20118-11-16</span></div> 
+           </div>
+ <button class="btn-primary">Approve</button> <button class="btn-danger">Decline</button>
+
+    </div>
+  </div>
+
+
+</div>
+
+</div>
+</div>
+
+<footer>  
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-4"> 
+                <div class="foot"> 
+                    <img src="images/logo.jpg">
+                    <p class="foot1">Copyright © 2018. <br>
+                    HighClifford International Hospital.</p>
+                </div>
+            </div>
+
+           <div class="col-md-4"> 
+                <div class="foot"> 
+                    <ul>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">About Us</a></li>
+                       <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">BLogs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4"> 
+                <div class="foot icons"> 
+                   <h3>Contact Us</h3>
+                   <a href="www.facebook.com" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+
+
+        </div>
+
+     </div>
+
+</footer>
+
+
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+
+
+
+
+
+
+	
+
+</body>
+</html>
