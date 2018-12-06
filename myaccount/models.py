@@ -1,12 +1,12 @@
 from django.db import models
-from phone_field import PhoneField
+# from phone_field import PhoneField
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
 # Create your models here.
 
 class UserProfileManager(BaseUserManager):
     #helps django work with the custom models#
 
-    def create_user(self,email,first_name,last_name,address,phone_num,Password=None):
+    def create_user(self,email,full_name,address,phone_num,Password=None):
 
         #creates a new user profile object#
 
@@ -14,17 +14,16 @@ class UserProfileManager(BaseUserManager):
             raise ValueError('User must have a valid email address')
 
         email=self.normalize_email(email)
-        user=self.model(email=email,first_name=first_name,last_name=last_name,address=address,phone_num=phone_num)
+        user=self.model(email=email,full_name=full_name,address=address,phone_num=phone_num)
         user.set_password(password)
         user.save(using=self.db)
         return user
 
-    def create_superuser(self,email,first_name,last_name,address,phone_num,password):
+    def create_superuser(self,email,full_name,address,phone_num,password):
         if not email:
             raise ValueError("Please enter the valid email address to register yourself")
         user = self.model(email=email,
-                                first_name=first_name,
-                                last_name=last_name,
+                                full_name=full_name,
                                 address=address,
                                 phone_num=phone_num)
         user.set_password(password)
@@ -37,12 +36,15 @@ class UserProfileManager(BaseUserManager):
 
 class UserProfile(AbstractBaseUser):
     #providing user profile custom model in the system#
+    full_name=models.CharField(max_length=100)
     email=models.EmailField(max_length=150,unique=True)
-    first_name=models.CharField(max_length=100)
-    last_name=models.CharField(max_length=100)
+    username=models.CharField(max_length=100)
+    password=models.CharField(max_length=100)
+    re_password=models.CharField(max_length=100)
     address=models.CharField(max_length=100)
-    phone_num=PhoneField(max_length=50)
+    phone_num=models.CharField(max_length=50)
     is_doctor=models.BooleanField(default=False)
+    is_patient=models.BooleanField(default=False)
     is_medistore=models.BooleanField(default=False)
     is_lab=models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
@@ -51,7 +53,7 @@ class UserProfile(AbstractBaseUser):
     objects= UserProfileManager()
 
     USERNAME_FIELD='email'
-    REQUIRED_FIELDS =['first_name','last_name','address','phone_num']
+    REQUIRED_FIELDS =['full_name','address','phone_num']
 
     def __str__(self):
         return self.email

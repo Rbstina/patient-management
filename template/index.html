@@ -1,8 +1,10 @@
 {% extends 'master/master.html' %}
+{% block title %} Patient management Home page  {% endblock %}
 
 {% load staticfiles %}
 
 {% block content %}
+{% include 'partial/header1.html' %}
 
 <!-- slider content -->
 <div class="slider">
@@ -16,30 +18,26 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
+        <div class="item active">
 
-      <div class="item active">
-        <img src="{% static 'images/1.jpg' %}" alt="Los Angeles" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>WE PROVIDE THE BEST DOCTORS</h3>
-          <p>Working with us is always so much fun!</p>
+        <img src="{{ MEDIA_URL}}{{slider.image.url}}" alt="" style="width:100%;">
+            <div class="carousel-caption">
+            <h3>{{slider.title}}</h3>
+            <p>{{slider.description}}</p>
         </div>
-      </div>
 
+      </div>
+      {% for x in slider2 %}
       <div class="item">
-        <img src="{% static 'images/2.jpg' %}" alt="Chicago" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Need an appointment?</h3>
-          <p>you are just one call away</p>
-        </div>
+
+      <img src="{{ MEDIA_URL}}{{x.image.url}}" alt="" style="width:100%;">
+          <div class="carousel-caption">
+          <h3>{{x.title}}</h3>
+          <p>{{x.description}}</p>
       </div>
 
-      <div class="item">
-        <img src="{% static 'images/3.jpg' %}" alt="New York" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>View all the records of your checkups</h3>
-          <p>We are providing an online facility!</p>
-        </div>
-      </div>
+    </div>
+    {% endfor %}
 
     </div>
 
